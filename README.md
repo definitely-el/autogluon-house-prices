@@ -73,15 +73,15 @@ Tested on:
 
 ---
 
-## Key Results
+## Results
 
 | Method | RMSE (Test) |
 |--------|-------------|
-| Scikit-learn GBM (manual) | ~$26,000 |
-| AutoGluon `medium_quality` | ~$23,500 |
-| AutoGluon `best_quality` | ~$19,800 |
+| Scikit-learn GBM (manual pipeline) | $25,352 |
+| AutoGluon `medium_quality` (2 min) | $23,202 |
+| AutoGluon `best_quality` (7 min) | $23,774 |
 
-AutoGluon trained 30+ model variants and assembled a 3-layer stacked ensemble. The best single base model (LightGBM) was wrapped with SHAP for individual prediction explanations.
+**Top features (permutation importance):** Overall Qual, Gr Liv Area, Neighborhood, 1st Flr SF, Total Bsmt SF
 
 ---
 
@@ -98,7 +98,7 @@ AutoGluon trained 30+ model variants and assembled a 3-layer stacked ensemble. T
 ## Dataset
 
 **Ames Housing Dataset** - 2,930 residential sales in Ames, Iowa (2006–2010)  
-82 explanatory features including lot size, neighborhood, quality ratings, and structural attributes  
+79 explanatory features including lot size, neighborhood, quality ratings, and structural attributes  
 Source: https://www.kaggle.com/datasets/prevek18/ames-housing-dataset
 
 ---
