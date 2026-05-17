@@ -13,7 +13,7 @@ This project evaluates AutoGluon as a rapid AutoML solution for tabular regressi
 - **AutoGluon `best_quality`** - full ensemble with multi-layer stacking
 - **Scikit-learn manual pipeline** - GBM with median imputation + one-hot encoding
 
-**Key finding:** Both AutoGluon presets beat the manual scikit-learn baseline. Interestingly, `medium_quality` ($23,202 RMSE) edged out `best_quality` ($23,774 RMSE) on the test set — because AutoGluon 1.5's DyStack detected stacking overfitting and automatically disabled multi-layer stacking, causing both presets to converge on L1-only ensembles. This is documented and discussed in the notebook and article.
+**Key finding:** Both AutoGluon presets beat the manual scikit-learn baseline. Interestingly, `medium_quality` ($23,202 RMSE) edged out `best_quality` ($23,774 RMSE) on the test set, because AutoGluon 1.5's DyStack detected stacking overfitting and automatically disabled multi-layer stacking, causing both presets to converge on L1-only ensembles. This is documented and discussed in the notebook and article.
 
 ---
 
@@ -68,7 +68,7 @@ jupyter notebook notebook.ipynb
 Tested on:
 - Python 3.11.7, Windows 10
 - AutoGluon 1.5.0
-- PyTorch 2.9.1 (CPU only — no CUDA)
+- PyTorch 2.9.1 (CPU only, no CUDA)
 - 8-core AMD64, 16 GB RAM
 
 ---
